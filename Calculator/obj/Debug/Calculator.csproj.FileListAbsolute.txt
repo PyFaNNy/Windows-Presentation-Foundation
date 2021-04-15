@@ -13,3 +13,10 @@ D:\Programing\С#\Wpf\Calculator\obj\Debug\Calculator.csproj.GenerateResource.ca
 D:\Programing\С#\Wpf\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 D:\Programing\С#\Wpf\Calculator\obj\Debug\Calculator.exe
 D:\Programing\С#\Wpf\Calculator\obj\Debug\Calculator.pdb
+D:\Programing\С#\Wpf\Calculator\bin\Debug\MaterialDesignColors.dll
+D:\Programing\С#\Wpf\Calculator\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Programing\С#\Wpf\Calculator\bin\Debug\MaterialDesignColors.pdb
+D:\Programing\С#\Wpf\Calculator\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Programing\С#\Wpf\Calculator\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Programing\С#\Wpf\Calculator\obj\Debug\App.baml
+D:\Programing\С#\Wpf\Calculator\obj\Debug\Calculator.csproj.CopyComplete

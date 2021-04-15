@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Calculator" Height="350" Width="500" Visibility="Visible" WindowStyle="ThreeDBorderWindow" Background="#FFFDFDFD">
-    <Grid x:Name="MainRoot" Background="Gray">
+    <Grid x:Name="MainRoot" Background="#FF383333">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -20,22 +21,22 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" FontSize="24" TextAlignment="Right" x:Name="OutputWindow"></TextBlock>
-        <Button FontSize="36" Grid.Row="1" Grid.Column="0">1</Button>
-        <Button FontSize="36" Grid.Row="1" Grid.Column="1">2</Button>
-        <Button FontSize="36" Grid.Row="1" Grid.Column="2">3</Button>
-        <Button FontSize="36" Grid.Row="1" Grid.Column="3">x</Button>
-        <Button FontSize="36" Grid.Row="2" Grid.Column="0">4</Button>
-        <Button FontSize="36" Grid.Row="2" Grid.Column="1">5</Button>
-        <Button FontSize="36" Grid.Row="2" Grid.Column="2">6</Button>
-        <Button FontSize="36" Grid.Row="2" Grid.Column="3">÷</Button>
-        <Button FontSize="36" Grid.Row="3" Grid.Column="0">7</Button>
-        <Button FontSize="36" Grid.Row="3" Grid.Column="1">8</Button>
-        <Button FontSize="36" Grid.Row="3" Grid.Column="2">9</Button>
-        <Button FontSize="36" Grid.Row="3" Grid.Column="3">-</Button>
-        <Button FontSize="36" Grid.Row="4" Grid.Column="0">0</Button>
-        <Button FontSize="36" Grid.Row="4" Grid.Column="1">=</Button>
-        <Button FontSize="36" Grid.Row="4" Grid.Column="2">AC</Button>
-        <Button FontSize="36" Grid.Row="4" Grid.Column="3">+</Button>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" FontSize="48" TextAlignment="Right" x:Name="OutputWindow" Foreground="White"></TextBlock>
+        <Button FontSize="36" Grid.Row="1" Grid.Column="0" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">1</Button>
+        <Button FontSize="36" Grid.Row="1" Grid.Column="1" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">2</Button>
+        <Button FontSize="36" Grid.Row="1" Grid.Column="2" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">3</Button>
+        <Button FontSize="36" Grid.Row="1" Grid.Column="3" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">x</Button>
+        <Button FontSize="36" Grid.Row="2" Grid.Column="0" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">4</Button>
+        <Button FontSize="36" Grid.Row="2" Grid.Column="1" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">5</Button>
+        <Button FontSize="36" Grid.Row="2" Grid.Column="2" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">6</Button>
+        <Button FontSize="36" Grid.Row="2" Grid.Column="3" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">/</Button>
+        <Button FontSize="36" Grid.Row="3" Grid.Column="0" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">7</Button>
+        <Button FontSize="36" Grid.Row="3" Grid.Column="1" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">8</Button>
+        <Button FontSize="36" Grid.Row="3" Grid.Column="2" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">9</Button>
+        <Button FontSize="36" Grid.Row="3" Grid.Column="3" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">-</Button>
+        <Button FontSize="36" Grid.Row="4" Grid.Column="0" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">0</Button>
+        <Button FontSize="36" Grid.Row="4" Grid.Column="1" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">=</Button>
+        <Button FontSize="36" Grid.Row="4" Grid.Column="2" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">AC</Button>
+        <Button FontSize="36" Grid.Row="4" Grid.Column="3" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">+</Button>
     </Grid>
 </Window>
