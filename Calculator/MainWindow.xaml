@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Calculator" Height="350" Width="500" Visibility="Visible" WindowStyle="ThreeDBorderWindow" Background="#FFFDFDFD">
+        Title="Calculator" Height="350" Width="500" Visibility="Visible" FontSize="18" Icon="calculator-icon-ios-7-11530957513dosfiydx37.png">
     <Grid x:Name="MainRoot" Background="#FF383333">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -25,7 +25,7 @@
         <Button FontSize="36" Grid.Row="1" Grid.Column="0" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">1</Button>
         <Button FontSize="36" Grid.Row="1" Grid.Column="1" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">2</Button>
         <Button FontSize="36" Grid.Row="1" Grid.Column="2" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">3</Button>
-        <Button FontSize="36" Grid.Row="1" Grid.Column="3" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">x</Button>
+        <Button FontSize="36" Grid.Row="1" Grid.Column="3" Height="Auto" Opacity="0.8" Background="#FF2A272E" BorderBrush="Black">*</Button>
         <Button FontSize="36" Grid.Row="2" Grid.Column="0" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">4</Button>
         <Button FontSize="36" Grid.Row="2" Grid.Column="1" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">5</Button>
         <Button FontSize="36" Grid.Row="2" Grid.Column="2" Height="Auto" Opacity="0.8" Background="#FF111111" BorderBrush="Black">6</Button>
