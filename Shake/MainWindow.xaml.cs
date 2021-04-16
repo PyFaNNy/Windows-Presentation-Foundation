@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Shake
 {
@@ -14,9 +15,16 @@ namespace Shake
     public partial class MainWindow : Window
     {
         const int SnakeSquareSize = 20;
+        const int SnakeStartLength = 3;
+        const int SnakeStartSpeed = 400;
+        const int SnakeSpeedThreshold = 100;
+        private Random rnd = new Random();
+        private DispatcherTimer gameTickTimer = new DispatcherTimer();
         private SolidColorBrush snakeBodyBrush = Brushes.Green;
         private SolidColorBrush snakeHeadBrush = Brushes.YellowGreen;
         private List<SnakePart> snakeParts = new List<SnakePart>();
+        private UIElement snakeFood = null;
+        private SolidColorBrush foodBrush = Brushes.Red;
 
         public enum SnakeDirection { Left, Right, Up, Down };
         private SnakeDirection snakeDirection = SnakeDirection.Right;
@@ -29,6 +37,7 @@ namespace Shake
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             DrawGameArea();
+            StartNewGame();
         }
 
         private void DrawGameArea()
@@ -64,7 +73,6 @@ namespace Shake
                     doneDrawingBackground = true;
             }
         }
-
         private void DrawSnake()
         {
             foreach (SnakePart snakePart in snakeParts)
@@ -83,7 +91,19 @@ namespace Shake
                 }
             }
         }
-
+        private void DrawSnakeFood()
+        {
+            Point foodPosition = GetNextFoodPosition();
+            snakeFood = new Ellipse()
+            {
+                Width = SnakeSquareSize,
+                Height = SnakeSquareSize,
+                Fill = foodBrush
+            };
+            GameArea.Children.Add(snakeFood);
+            Canvas.SetTop(snakeFood, foodPosition.Y);
+            Canvas.SetLeft(snakeFood, foodPosition.X);
+        }
         private void MoveSnake()
         {
             // Remove the last part of the snake, in preparation of the new part added below  
@@ -133,5 +153,45 @@ namespace Shake
             //DoCollisionCheck();          
         }
 
+        public void SnakeWPFSample()
+        {
+            InitializeComponent();
+            gameTickTimer.Tick += GameTickTimer_Tick;
+        }
+        private void GameTickTimer_Tick(object sender, EventArgs e)
+        {
+            MoveSnake();
+        }
+
+        private void StartNewGame()
+        {
+            snakeLength = SnakeStartLength;
+            snakeDirection = SnakeDirection.Right;
+            snakeParts.Add(new SnakePart() { Position = new Point(SnakeSquareSize * 5, SnakeSquareSize * 5) });
+            gameTickTimer.Interval = TimeSpan.FromMilliseconds(SnakeStartSpeed);
+
+            // Draw the snake and the snake food
+            DrawSnake();
+            DrawSnakeFood();
+
+            // Go!        
+            gameTickTimer.IsEnabled = true;
+        }
+
+        private Point GetNextFoodPosition()
+        {
+            int maxX = (int)(GameArea.ActualWidth / SnakeSquareSize);
+            int maxY = (int)(GameArea.ActualHeight / SnakeSquareSize);
+            int foodX = rnd.Next(0, maxX) * SnakeSquareSize;
+            int foodY = rnd.Next(0, maxY) * SnakeSquareSize;
+
+            foreach (SnakePart snakePart in snakeParts)
+            {
+                if ((snakePart.Position.X == foodX) && (snakePart.Position.Y == foodY))
+                    return GetNextFoodPosition();
+            }
+
+            return new Point(foodX, foodY);
+        }
     }
 }

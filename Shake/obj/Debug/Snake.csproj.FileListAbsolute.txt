@@ -1,0 +1,15 @@
+D:\Programing\С#\Wpf\Shake\obj\Debug\MainWindow.g.cs
+D:\Programing\С#\Wpf\Shake\obj\Debug\App.g.cs
+D:\Programing\С#\Wpf\Shake\obj\Debug\Shake_MarkupCompile.cache
+D:\Programing\С#\Wpf\Shake\obj\Debug\Shake_MarkupCompile.lref
+D:\Programing\С#\Wpf\Shake\obj\Debug\Shake.exe
+D:\Programing\С#\Wpf\Shake\obj\Debug\Shake.pdb
+D:\Programing\С#\Wpf\Shake\bin\Debug\Shake.exe.config
+D:\Programing\С#\Wpf\Shake\bin\Debug\Shake.exe
+D:\Programing\С#\Wpf\Shake\bin\Debug\Shake.pdb
+D:\Programing\С#\Wpf\Shake\obj\Debug\Snake.csprojAssemblyReference.cache
+D:\Programing\С#\Wpf\Shake\obj\Debug\MainWindow.baml
+D:\Programing\С#\Wpf\Shake\obj\Debug\Shake.g.resources
+D:\Programing\С#\Wpf\Shake\obj\Debug\Shake.Properties.Resources.resources
+D:\Programing\С#\Wpf\Shake\obj\Debug\Snake.csproj.GenerateResource.cache
+D:\Programing\С#\Wpf\Shake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
